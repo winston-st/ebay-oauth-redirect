@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>eBay OAuth - accepted</title></head>
+<body style="font-family:system-ui;max-width:44rem;margin:3rem auto;line-height:1.5">
+<h1>eBay OAuth redirect - accepted</h1>
+<p>Authorization <strong>accepted</strong>. Copy the values below.</p>
+<pre id="out" style="background:#f4f4f4;padding:1rem;white-space:pre-wrap"></pre>
+<p style="color:#666">This page stores nothing and sends nothing anywhere.</p>
+<script>
+var p = new URLSearchParams(location.search);
+var lines = ['code','state','expires_in'].map(function (k) { return k + ': ' + (p.get(k) || '(none)'); });
+document.getElementById('out').textContent = lines.join('\n');
+</script>
+</body></html>
